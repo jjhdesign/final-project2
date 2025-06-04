@@ -1,0 +1,783 @@
+* {
+  cursor: none !important;
+}
+
+#logo {
+  position: fixed;
+  top: 1vw;
+  left: 2vw;
+  width: 7vw;
+  z-index: 10000;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+#logo:hover {
+  content: url("./img/logo2.png");
+}
+
+.ship-nav {
+  position: fixed;
+  top: 2vw;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.ship-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3vw;
+  margin: 0;
+  padding: 0;
+}
+
+.ship-nav li {
+  color: white;
+  font-size: 1.25vw; /* 24px → 약 1.25vw */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: "Oswald", sans-serif;
+}
+
+.ship-nav li:hover {
+  color: #e91514;
+}
+
+#distanceIndicator {
+  position: fixed;
+  bottom: 2vw;
+  padding: 0.2vw 0.6vw 0.2vw 0.6vw;
+  color: white;
+  font-size: 1.5vw;
+  background-color: rgb(0, 0, 0);
+  font-family: "Oswald", sans-serif;
+  z-index: 9999;
+  left: 50%; /* 가운데 정렬 기준점 */
+  transform: translateX(-50%); /* 정렬 보정 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  word-break: keep-all;
+  white-space: normal;
+  font-family: "Pretendard", sans-serif;
+
+  background-image: url("./img/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative; /* ✅ ::before 작동 위해 추가 */
+}
+
+/* ✅ 스크롤 시 덮어씌울 배경 (bg2.png) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./img/bg2.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  pointer-events: none;
+}
+
+/* ✅ 스크롤 중일 때만 bg2 보이게 */
+body.scrolling::before {
+  opacity: 1;
+}
+
+#customCursor {
+  width: 9vw; /* 약 300px */
+  height: auto;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%) rotate(0deg); /* 중심 정렬 + 회전 초기값 */
+  transition: transform 0.1s linear;
+  animation: floatSpin 10s linear infinite;
+}
+
+/* 커서가 떠다니며 회전하는 애니메이션 */
+@keyframes floatSpin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  flex: none;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ship1Wrapper {
+  z-index: 7;
+}
+#ship2Wrapper {
+  z-index: 6;
+}
+#ship3Wrapper {
+  z-index: 3;
+}
+#ship4Wrapper {
+  z-index: 2;
+}
+
+.section1 {
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: -10%;
+  margin-top: 14%;
+  z-index: 20;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15vw;
+  color: #e91514;
+  position: relative;
+  letter-spacing: -0.8vw;
+}
+
+.title-o {
+  font-family: "Luxurious Script";
+  font-size: 26vw;
+  color: #e91514;
+  -webkit-text-stroke: 0.15vw #000;
+  position: relative;
+  z-index: 10;
+  margin-right: -1.3vw;
+  top: 2vw;
+}
+
+.odyssey-container {
+  margin-top: -13vw;
+  margin-left: 1vw;
+}
+
+.space-row {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.small-box {
+  background-color: black;
+  color: white;
+  padding: 0.7vw;
+  max-width: 31.5vw;
+  margin-top: 1vw;
+}
+
+.small-title {
+  font-size: 1.7vw;
+  display: block;
+  margin-bottom: -0.5vw;
+}
+
+.small-text {
+  font-size: 1vw;
+  line-height: 1.5;
+  display: block;
+}
+
+.section2 {
+  width: 90vw;
+}
+.section3 {
+  height: 100vh;
+  width: 80vw;
+}
+.section4 {
+  height: 100vh;
+  width: 100vw;
+}
+.section5 {
+}
+
+.section6 {
+}
+
+.section7 {
+}
+
+.section8 {
+  height: 100vh;
+  width: 50vw;
+}
+
+.section9 {
+}
+
+.section10 {
+}
+
+.section11 {
+}
+
+.main-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.earth-bg {
+  position: fixed;
+  margin-top: 2vw;
+  margin-left: 27vw;
+  width: 48vw;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.scene {
+  position: relative;
+}
+
+.ship-wrapper {
+  position: sticky;
+  top: 40%;
+  left: 47vw;
+  margin-left: -100vw;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.ship1-wrapper {
+  position: sticky;
+  top: 40%;
+  left: 47vw;
+  margin-left: -790vw;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.ship3-wrapper {
+  position: sticky;
+  top: 40%;
+  left: 47vw;
+  margin-left: -100vw;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.ship6-wrapper {
+  position: sticky;
+  top: 40%;
+  left: 47vw;
+  margin-left: -260vw;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.ship7-wrapper {
+  position: sticky;
+  top: 40%;
+  left: 47vw;
+  margin-left: -90vw;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.ship1 {
+  width: 12vw;
+}
+
+.ship-overlay-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ship-overlay-box2 {
+  position: absolute;
+  left: 10%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ship-overlay-box3 {
+  position: absolute;
+  left: 60%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.ship1-text {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 8vw;
+  color: #e91514;
+  text-align: center;
+  padding-bottom: 10vw;
+  position: relative;
+  top: -15vw;
+}
+
+.ship1-bottom-text {
+  margin-top: 2vw;
+}
+
+.ship-bottom-text {
+  margin-top: -22vw;
+  margin-left: 11.5vw;
+}
+
+.ship-bottom-text2 {
+  margin-top: -22vw;
+  margin-left: 14vw;
+}
+
+.ship1-text2 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 6vw;
+  color: #e91514;
+  text-align: center;
+  margin-top: -22vw;
+  position: absolute;
+  z-index: 11;
+  line-height: 93%;
+}
+
+.ship1-text3 {
+  font-size: 1vw;
+  color: white;
+  background-color: black;
+  padding: 0.7vw;
+  width: 24vw;
+  margin-top: 1vw;
+  position: relative;
+  z-index: 11;
+  line-height: 150%;
+  border: 0.1vw solid white;
+}
+.ship1-text3 td {
+  padding: 0.4vw 0vw 0.4vw 0vw;
+  vertical-align: top;
+}
+
+.ship-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.ship2 {
+  position: sticky;
+  width: 11.5vw;
+  margin-left: -270vw;
+  left: 47vw;
+  top: 44%;
+}
+
+.ship2-bottom-text {
+  margin-top: 3.83vw;
+}
+
+.ship3 {
+  position: sticky;
+  width: 11.5vw;
+  margin-left: -80vw;
+  left: 47vw;
+  top: 40%;
+}
+
+.ship-text-2 {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 6vw;
+  color: #e91514;
+  text-align: center;
+  margin-top: -25vw;
+  position: absolute;
+  z-index: 11;
+  line-height: 93%;
+}
+
+.ship3-bottom-text {
+  margin-top: 3.2vw;
+}
+
+.moon-section {
+  position: relative;
+}
+.moon {
+  position: absolute;
+  left: 60vw;
+  height: 28vw;
+  z-index: 10;
+  cursor: url("./img/man2.png") 16 16, auto;
+}
+.overlay-box {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  color: white;
+  z-index: 9998;
+  display: none;
+}
+
+.overlay-box * {
+  z-index: inherit !important; /* ✅ 내부 요소도 위에 오게 */
+}
+
+.left-container {
+  position: fixed;
+  top: 34%;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.planet-title-container {
+  margin-left: 12%;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: -17vw;
+}
+
+.planet-title1 {
+  font-family: "Luxurious Script";
+  font-size: 26vw;
+  color: #e91514;
+  -webkit-text-stroke: 0.15vw #000;
+  position: relative;
+  z-index: 10;
+  margin-right: -1.3vw;
+}
+
+.planet-text-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.planet-small-img {
+  width: 11vw;
+}
+
+.planet-big-img {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  height: auto;
+  max-height: 100vh;
+}
+
+.planet-text1 {
+  font-size: 1vw;
+  color: white;
+  background-color: black;
+  padding: 0.7vw;
+  max-width: 32vw;
+  line-height: 1.5;
+}
+
+.planet-text2 {
+  font-size: 1vw;
+  color: white;
+  background-color: black;
+  padding: 0.7vw;
+  max-width: 32vw;
+  margin-left: 12%;
+  margin-top: 5%;
+}
+
+.planet-text2 td {
+  padding: 0.6vw;
+}
+
+/* 캐러셀 전체 */
+.planet-carousel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 35vw;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* 라디오 버튼 숨김 */
+.planet-carousel input[type="radio"] {
+  display: none;
+}
+
+/* 이미지들 묶음 */
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* 각 이미지 슬라이드 */
+.carousel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 슬라이드 위치 제어 */
+#moon1:checked ~ .carousel-track {
+  transform: translateX(0%);
+}
+#moon2:checked ~ .carousel-track {
+  transform: translateX(-100%);
+}
+#moon3:checked ~ .carousel-track {
+  transform: translateX(-200%);
+}
+
+/* 화살표 버튼 공통 */
+.carousel-arrows {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.carousel-arrows label {
+  width: 3vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.arrow-img {
+  height: 3vw;
+  width: auto;
+  display: block;
+}
+
+.arrow-img.flipped {
+  transform: scaleX(-1);
+}
+
+/* 해당 슬라이드일 때만 보이게 */
+#moon1:checked ~ .arrow-1,
+#moon2:checked ~ .arrow-2,
+#moon3:checked ~ .arrow-3 {
+  display: flex;
+}
+
+.mars {
+  position: absolute;
+  margin-top: -18vw;
+  right: 78%;
+  height: 34vw;
+  z-index: 10;
+  cursor: url("./img/man2.png") 16 16, auto;
+}
+
+/* Mars 슬라이드 제어 */
+#mars1:checked ~ .carousel-track {
+  transform: translateX(0%);
+}
+#mars2:checked ~ .carousel-track {
+  transform: translateX(-100%);
+}
+#mars3:checked ~ .carousel-track {
+  transform: translateX(-200%);
+}
+
+/* Mars 화살표 표시 제어 */
+#mars1:checked ~ .arrow-1,
+#mars2:checked ~ .arrow-2,
+#mars3:checked ~ .arrow-3 {
+  display: flex;
+}
+
+.jupiter {
+  position: absolute;
+
+  right: 78%;
+  height: 50vw;
+  z-index: 10;
+  cursor: url("./img/man2.png") 16 16, auto;
+}
+
+#jupiter1:checked ~ .carousel-track {
+  transform: translateX(0%);
+}
+#jupiter2:checked ~ .carousel-track {
+  transform: translateX(-100%);
+}
+#jupiter3:checked ~ .carousel-track {
+  transform: translateX(-200%);
+}
+
+#jupiter1:checked ~ .arrow-1,
+#jupiter2:checked ~ .arrow-2,
+#jupiter3:checked ~ .arrow-3 {
+  display: flex;
+}
+
+.saturn {
+  position: absolute;
+  right: 55%;
+  height: 40vw;
+  z-index: 10;
+  cursor: url("./img/man2.png") 16 16, auto;
+}
+
+#saturn1:checked ~ .carousel-track {
+  transform: translateX(0%);
+}
+#saturn2:checked ~ .carousel-track {
+  transform: translateX(-100%);
+}
+#saturn3:checked ~ .carousel-track {
+  transform: translateX(-200%);
+}
+
+#saturn1:checked ~ .arrow-1,
+#saturn2:checked ~ .arrow-2,
+#saturn3:checked ~ .arrow-3 {
+  display: flex;
+}
+
+.uranus {
+  position: absolute;
+  right: 65%;
+  height: 40vw;
+  z-index: 10;
+  cursor: url("./img/man2.png") 16 16, auto;
+}
+
+#uranus1:checked ~ .carousel-track {
+  transform: translateX(0%);
+}
+#uranus2:checked ~ .carousel-track {
+  transform: translateX(-100%);
+}
+#uranus3:checked ~ .carousel-track {
+  transform: translateX(-200%);
+}
+
+#uranus1:checked ~ .arrow-1,
+#uranus2:checked ~ .arrow-2,
+#uranus3:checked ~ .arrow-3 {
+  display: flex;
+}
+
+.neptune {
+  position: absolute;
+  right: 78%;
+  height: 40vw;
+  z-index: 10;
+  cursor: url("./img/man2.png") 16 16, auto;
+}
+
+#neptune1:checked ~ .carousel-track {
+  transform: translateX(0%);
+}
+#neptune2:checked ~ .carousel-track {
+  transform: translateX(-100%);
+}
+#neptune3:checked ~ .carousel-track {
+  transform: translateX(-200%);
+}
+
+#neptune1:checked ~ .arrow-1,
+#neptune2:checked ~ .arrow-2,
+#neptune3:checked ~ .arrow-3 {
+  display: flex;
+}
+
+.pluto {
+  position: absolute;
+  right: 84%;
+  height: 28vw;
+  z-index: 10;
+  cursor: url("./img/man2.png") 16 16, auto;
+}
+
+#pluto1:checked ~ .carousel-track {
+  transform: translateX(0%);
+}
+#pluto2:checked ~ .carousel-track {
+  transform: translateX(-100%);
+}
+#pluto3:checked ~ .carousel-track {
+  transform: translateX(-200%);
+}
+
+#pluto1:checked ~ .arrow-1,
+#pluto2:checked ~ .arrow-2,
+#pluto3:checked ~ .arrow-3 {
+  display: flex;
+}

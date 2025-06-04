@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Space Odyssey</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img id="logo" src="./img/logo.png" alt="Logo" />
+
+    <img id="customCursor" src="./img/man1.png" alt="cursor" />
+    <div class="scroll-container" id="scroll-container">
+      <nav class="ship-nav">
+        <ul>
+          <li data-target="ship1">Sputnik 1</li>
+          <li data-target="ship2">Apollo 11</li>
+          <li data-target="ship3">Perseverance</li>
+          <li data-target="ship4">Galileo</li>
+          <li data-target="ship5">Cassini-Huygens</li>
+          <li data-target="ship6">Voyager 2</li>
+          <li data-target="ship7">New Horizons</li>
+          <li data-target="ship8">Voyager 1</li>
+        </ul>
+      </nav>
+
+      <!-- Section 1 -->
+      <section class="section1">
+        <img src="./img/earth.png" class="earth-bg" />
+        <div class="title-container">
+          <div class="space-row">
+            <span class="title">SPACE</span>
+            <div class="small-box">
+              <span class="small-title">우리는 얼마나 멀리까지 나아갔을까.</span
+              ><br />
+              <span class="small-text">
+                지구에서 시작된 탐사의 궤적은 수천만 킬로미터를 넘어 우주 깊숙한
+                곳까지 이어졌습니다. 이 사이트는 인류가 보낸 주요 탐사선의
+                발자취를 따라, 우리의 여정이 얼마나 광활한지를 시각적으로
+                보여줍니다. 스크롤을 따라 펼쳐지는 우주는 시간이고, 거리이며,
+                우리 도전의 기록입니다.
+              </span>
+            </div>
+          </div>
+          <div class="odyssey-container">
+            <span class="title-o">O</span>
+            <span class="title">dyssey</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="section2">
+        <div class="ship1-wrapper" id="ship1Wrapper">
+          <img src="./img/ship1.png" class="ship1" id="ship1" />
+          <div class="ship-overlay-box hidden" id="ship1Overlay">
+            <div class="ship1-bottom-text">
+              <span class="ship1-text2" style="margin-left: 0.5vw"
+                >Sputnik 1</span
+              >
+              <table class="ship1-text3">
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    국가
+                  </td>
+                  <td>소련(USSR)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    발사 일자
+                  </td>
+                  <td>1957년 10월 4일</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    임무 기간
+                  </td>
+                  <td>약 92일간 궤도 유지</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    정보
+                  </td>
+                  <td>
+                    인류 최초의 인공위성으로, 1957년 지구 궤도에 진입해 우주
+                    시대의 시작을 알렸습니다.
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="section3">
+        <img src="./img/moon.png" class="moon" id="moon" />
+
+        <!-- 오버레이 시작 -->
+        <div class="overlay-box" id="moonOverlayBox">
+          <div class="left-container">
+            <div class="planet-title-container">
+              <span class="planet-title1">M</span>
+              <p class="title">oon</p>
+            </div>
+            <div class="planet-text-box">
+              <img src="./img/moon2.png" class="planet-small-img" />
+              <p class="planet-text1">
+                달은 인류가 지구 밖으로 나가 발을 디딘 첫 번째 천체입니다.
+                대기가 없어 운석 충돌 흔적이 고스란히 남아 있고, 지구를 돌며
+                항상 같은 면만을 보여주는 독특한 특징을 가지고 있습니다.
+              </p>
+            </div>
+            <table class="planet-text2">
+              <tbody>
+                <tr>
+                  <td>반지름</td>
+                  <td style="padding-left: 32px">1,737km</td>
+                </tr>
+                <tr>
+                  <td>대기 구성</td>
+                  <td style="padding-left: 32px">
+                    매우 희박한 외기권 (헬륨, 네온, 수소 등)
+                  </td>
+                </tr>
+                <tr>
+                  <td>자전 주기</td>
+                  <td style="padding-left: 32px">약 27.3일</td>
+                </tr>
+                <tr>
+                  <td>공전 주기</td>
+                  <td style="padding-left: 32px">약 27.3일</td>
+                </tr>
+                <tr>
+                  <td>평균 온도</td>
+                  <td style="padding-left: 32px">-173°C ~ 127°C</td>
+                </tr>
+                <tr>
+                  <td>위성 개수</td>
+                  <td style="padding-left: 32px">지구의 위성</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="planet-carousel">
+            <!-- 슬라이드 컨트롤 -->
+            <input type="radio" name="moon-slide" id="moon1" checked />
+            <input type="radio" name="moon-slide" id="moon2" />
+            <input type="radio" name="moon-slide" id="moon3" />
+
+            <!-- 슬라이드 이미지 묶음 -->
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="./img/moon3-1.png" /></div>
+              <div class="carousel-slide"><img src="./img/moon3-2.png" /></div>
+              <div class="carousel-slide"><img src="./img/moon3-3.png" /></div>
+            </div>
+
+            <!-- 좌우 화살표 버튼 -->
+            <div class="carousel-arrows arrow-1">
+              <label for="moon3" class="prev">
+                <img src="./img/arrow.png" class="arrow-img" />
+              </label>
+              <label for="moon2" class="next">
+                <img src="./img/arrow.png" class="arrow-img flipped" />
+              </label>
+            </div>
+
+            <div class="carousel-arrows arrow-2">
+              <label for="moon1" class="prev">
+                <img src="./img/arrow.png" class="arrow-img" />
+              </label>
+              <label for="moon3" class="next">
+                <img src="./img/arrow.png" class="arrow-img flipped" />
+              </label>
+            </div>
+
+            <div class="carousel-arrows arrow-3">
+              <label for="moon2" class="prev">
+                <img src="./img/arrow.png" class="arrow-img" />
+              </label>
+              <label for="moon1" class="next">
+                <img src="./img/arrow.png" class="arrow-img flipped" />
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- 오버레이 끝 -->
+
+        <div class="ship1-wrapper" style="z-index: 4" id="ship2Wrapper">
+          <img src="./img/ship2.png" class="ship1" id="ship2" />
+          <div
+            class="ship-overlay-box hidden"
+            id="ship2Overlay"
+            style="left: 23%"
+          >
+            <div class="ship2-bottom-text">
+              <span class="ship1-text2" style="margin-left: 8vw"
+                >Apollo 11</span
+              >
+              <table class="ship1-text3" style="margin-left: 6vw">
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    국가
+                  </td>
+                  <td>미국 (USA)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    발사 일자
+                  </td>
+                  <td>1969년 7월 16일</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    임무 기간
+                  </td>
+                  <td>8일 (1969.7.16 ~ 7.24)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    정보
+                  </td>
+                  <td>
+                    인류 최초로 달에 착륙한 유인 탐사선으로, 인류의 첫 지구 밖
+                    발걸음을 기록했습니다.
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="section4">
+        <div class="ship3-wrapper" id="ship3Wrapper">
+          <img src="./img/ship3.png" class="ship1" id="ship3" />
+          <div class="ship-overlay-box hidden" id="ship3Overlay">
+            <div class="ship3-bottom-text">
+              <span class="ship1-text2" style="left: -16%">Perseverance</span>
+              <table class="ship1-text3">
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    국가
+                  </td>
+                  <td>미국 (USA)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    발사 일자
+                  </td>
+                  <td>2020년 7월 30일</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    임무 기간
+                  </td>
+                  <td>2020.7.30~</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    정보
+                  </td>
+                  <td>
+                    화성 표면 탐사 및 고대 생명체 흔적 탐색을 목적으로 한 최신형
+                    로버입니다.
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 5 -->
+      <section class="section5">
+        <div class="space-layer">
+          <img src="./img/mars.png" class="mars" id="mars" />
+
+          <!-- ✅ Mars 오버레이 박스 -->
+          <div class="overlay-box" id="marsOverlayBox" style="display: none">
+            <div class="left-container">
+              <div class="planet-title-container">
+                <span class="planet-title1">M</span>
+                <p class="title">ars</p>
+              </div>
+              <div class="planet-text-box">
+                <img src="./img/mars-small.png" class="planet-small-img" />
+                <p class="planet-text1">
+                  화성은 지구와 가장 유사한 행성으로, 과거 물이 흐른 흔적이
+                  발견되며 생명체의 가능성이 연구되고 있습니다. 붉은 표면
+                  아래에는 미지의 비밀이 숨겨져 있으며, 대기와 지형은 여전히
+                  탐사의 중심입니다.
+                </p>
+              </div>
+              <table class="planet-text2">
+                <tbody>
+                  <tr>
+                    <td>반지름</td>
+                    <td style="padding-left: 32px">3,390km</td>
+                  </tr>
+                  <tr>
+                    <td>대기 구성</td>
+                    <td style="padding-left: 32px">이산화탄소 95%, 질소 등</td>
+                  </tr>
+                  <tr>
+                    <td>자전 주기</td>
+                    <td style="padding-left: 32px">약 24.6시간</td>
+                  </tr>
+                  <tr>
+                    <td>공전 주기</td>
+                    <td style="padding-left: 32px">약 687일</td>
+                  </tr>
+                  <tr>
+                    <td>평균 온도</td>
+                    <td style="padding-left: 32px">-63°C</td>
+                  </tr>
+                  <tr>
+                    <td>위성 개수</td>
+                    <td style="padding-left: 32px">2개 (포보스, 데이모스)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- ✅ Mars 캐러셀 -->
+            <div class="planet-carousel">
+              <input type="radio" name="mars-slide" id="mars1" checked />
+              <input type="radio" name="mars-slide" id="mars2" />
+              <input type="radio" name="mars-slide" id="mars3" />
+
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="./img/mars1.png" /></div>
+                <div class="carousel-slide"><img src="./img/mars2.png" /></div>
+                <div class="carousel-slide"><img src="./img/mars3.png" /></div>
+              </div>
+
+              <div class="carousel-arrows arrow-1">
+                <label for="mars3" class="prev">
+                  <img src="./img/arrow.png" class="arrow-img" />
+                </label>
+                <label for="mars2" class="next">
+                  <img src="./img/arrow.png" class="arrow-img flipped" />
+                </label>
+              </div>
+
+              <div class="carousel-arrows arrow-2">
+                <label for="mars1" class="prev">
+                  <img src="./img/arrow.png" class="arrow-img" />
+                </label>
+                <label for="mars3" class="next">
+                  <img src="./img/arrow.png" class="arrow-img flipped" />
+                </label>
+              </div>
+
+              <div class="carousel-arrows arrow-3">
+                <label for="mars2" class="prev">
+                  <img src="./img/arrow.png" class="arrow-img" />
+                </label>
+                <label for="mars1" class="next">
+                  <img src="./img/arrow.png" class="arrow-img flipped" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ship-wrapper" id="ship4Wrapper">
+          <img src="./img/ship4.png" class="ship1" id="ship4" />
+          <div class="ship-overlay-box3 hidden" id="ship4Overlay">
+            <div class="ship1-bottom-text">
+              <span class="ship1-text2" style="left: 14%">Galileo</span>
+              <table class="ship1-text3">
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    국가
+                  </td>
+                  <td>미국 (USA)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    발사 일자
+                  </td>
+                  <td>1989년 10월 18일</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    임무 기간
+                  </td>
+                  <td>약 14년 (1995 ~ 2003)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    정보
+                  </td>
+                  <td>
+                    목성 궤도에 진입해 대기, 자기장, 위성 등을 장기간 관측한
+                    탐사선입니다.
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 6 -->
+      <section class="section6">
+        <!-- Jupiter 이미지 -->
+        <img src="./img/jupiter.png" class="jupiter" id="jupiter" />
+
+        <!-- Jupiter 오버레이 박스 -->
+        <div class="overlay-box" id="jupiterOverlayBox" style="display: none">
+          <div class="left-container">
+            <div class="planet-title-container">
+              <span class="planet-title1">J</span>
+              <p class="title">upiter</p>
+            </div>
+            <div class="planet-text-box">
+              <img src="./img/jupiter-small.png" class="planet-small-img" />
+              <p class="planet-text1">
+                목성은 태양계에서 가장 거대한 행성으로, 끊임없는 폭풍과 대적점을
+                품고 있습니다. 두꺼운 대기 아래의 내부는 아직 밝혀지지 않았고,
+                수많은 위성들이 이를 중심으로 돌고 있습니다.
+              </p>
+            </div>
+            <table class="planet-text2">
+              <tbody>
+                <tr>
+                  <td>반지름</td>
+                  <td style="padding-left: 32px">69,911km</td>
+                </tr>
+                <tr>
+                  <td>대기 구성</td>
+                  <td style="padding-left: 32px">수소, 헬륨</td>
+                </tr>
+                <tr>
+                  <td>자전 주기</td>
+                  <td style="padding-left: 32px">약 10시간</td>
+                </tr>
+                <tr>
+                  <td>공전 주기</td>
+                  <td style="padding-left: 32px">약 11.9년</td>
+                </tr>
+                <tr>
+                  <td>평균 온도</td>
+                  <td style="padding-left: 32px">-108°C</td>
+                </tr>
+                <tr>
+                  <td>위성 개수</td>
+                  <td style="padding-left: 32px">95개+</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Jupiter 캐러셀 -->
+          <div class="planet-carousel">
+            <input type="radio" name="jupiter-slide" id="jupiter1" checked />
+            <input type="radio" name="jupiter-slide" id="jupiter2" />
+            <input type="radio" name="jupiter-slide" id="jupiter3" />
+
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="./img/jupiter1.png" /></div>
+              <div class="carousel-slide"><img src="./img/jupiter2.png" /></div>
+              <div class="carousel-slide"><img src="./img/jupiter3.png" /></div>
+            </div>
+
+            <div class="carousel-arrows arrow-1">
+              <label for="jupiter3" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="jupiter2" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+            <div class="carousel-arrows arrow-2">
+              <label for="jupiter1" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="jupiter3" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+            <div class="carousel-arrows arrow-3">
+              <label for="jupiter2" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="jupiter1" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="ship-wrapper" id="ship4Wrapper">
+          <img src="./img/ship5.png" class="ship1" id="ship5" />
+          <div class="ship-overlay-box2 hidden" id="ship5Overlay">
+            <div class="ship1-bottom-text" style="margin-left: 13vw">
+              <span class="ship-text-2">Cassini-Huygens</span>
+              <table class="ship1-text3">
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    국가
+                  </td>
+                  <td>미국 (USA)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    발사 일자
+                  </td>
+                  <td>1997년 10월 15일</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    임무 기간
+                  </td>
+                  <td>약 20년 (2004 ~ 2017)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    정보
+                  </td>
+                  <td>
+                    토성과 그 위성 타이탄을 장기간 관측하며, 고리와 대기에 대한
+                    방대한 데이터를 수집했습니다.
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 7 -->
+      <section class="section7">
+        <!-- Saturn 이미지 -->
+        <img src="./img/saturn.png" class="saturn" id="saturn" />
+
+        <!-- Saturn 오버레이 박스 -->
+        <div class="overlay-box" id="saturnOverlayBox" style="display: none">
+          <div class="left-container">
+            <div class="planet-title-container">
+              <span class="planet-title1">S</span>
+              <p class="title">aturn</p>
+            </div>
+            <div class="planet-text-box">
+              <img src="./img/saturn-small.png" class="planet-small-img" />
+              <p class="planet-text1">
+                토성은 얼음과 암석으로 이루어진 아름다운 고리를 가진 가스
+                행성입니다. 수소와 헬륨으로 구성된 대기와 다양한 위성들이
+                토성만의 신비한 아름다움을 더합니다.
+              </p>
+            </div>
+            <table class="planet-text2">
+              <tbody>
+                <tr>
+                  <td>반지름</td>
+                  <td style="padding-left: 32px">58,232km</td>
+                </tr>
+                <tr>
+                  <td>대기 구성</td>
+                  <td style="padding-left: 32px">수소, 헬륨</td>
+                </tr>
+                <tr>
+                  <td>자전 주기</td>
+                  <td style="padding-left: 32px">약 10.7시간</td>
+                </tr>
+                <tr>
+                  <td>공전 주기</td>
+                  <td style="padding-left: 32px">약 29.5년</td>
+                </tr>
+                <tr>
+                  <td>평균 온도</td>
+                  <td style="padding-left: 32px">-139°C</td>
+                </tr>
+                <tr>
+                  <td>위성 개수</td>
+                  <td style="padding-left: 32px">145개+</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Saturn 캐러셀 -->
+          <div class="planet-carousel">
+            <input type="radio" name="saturn-slide" id="saturn1" checked />
+            <input type="radio" name="saturn-slide" id="saturn2" />
+            <input type="radio" name="saturn-slide" id="saturn3" />
+
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="./img/saturn1.png" /></div>
+              <div class="carousel-slide"><img src="./img/saturn2.png" /></div>
+              <div class="carousel-slide"><img src="./img/saturn3.png" /></div>
+            </div>
+
+            <div class="carousel-arrows arrow-1">
+              <label for="saturn3" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="saturn2" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+            <div class="carousel-arrows arrow-2">
+              <label for="saturn1" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="saturn3" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+            <div class="carousel-arrows arrow-3">
+              <label for="saturn2" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="saturn1" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 8 -->
+      <section class="section8">
+        <!-- Uranus 이미지 -->
+        <img src="./img/uranus.png" class="uranus" id="uranus" />
+
+        <!-- Uranus 오버레이 -->
+        <div class="overlay-box" id="uranusOverlayBox" style="display: none">
+          <div class="left-container">
+            <div class="planet-title-container">
+              <span class="planet-title1">U</span>
+              <p class="title">ranus</p>
+            </div>
+            <div class="planet-text-box">
+              <img src="./img/uranus-small.png" class="planet-small-img" />
+              <p class="planet-text1">
+                천왕성은 자전축이 약 97.8도 기울어져 있어 옆으로 누운 채
+                회전합니다. 이로 인해 극지방에 긴 낮과 밤이 생십니다. 행성의
+                푸른빛은 대기 중 메탄에서 비롯됩니다.
+              </p>
+            </div>
+            <table class="planet-text2">
+              <tr>
+                <td>반지름</td>
+                <td style="padding-left: 32px">25,362km</td>
+              </tr>
+              <tr>
+                <td>대기 구성</td>
+                <td style="padding-left: 32px">수소, 헬륨, 메탄</td>
+              </tr>
+              <tr>
+                <td>자전 주기</td>
+                <td style="padding-left: 32px">약 17.2시간</td>
+              </tr>
+              <tr>
+                <td>공전 주기</td>
+                <td style="padding-left: 32px">약 84년</td>
+              </tr>
+              <tr>
+                <td>평균 온도</td>
+                <td style="padding-left: 32px">-224°C</td>
+              </tr>
+              <tr>
+                <td>위성 개수</td>
+                <td style="padding-left: 32px">27개</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="planet-carousel">
+            <input type="radio" name="uranus-slide" id="uranus1" checked />
+            <input type="radio" name="uranus-slide" id="uranus2" />
+            <input type="radio" name="uranus-slide" id="uranus3" />
+
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="./img/uranus1.png" /></div>
+              <div class="carousel-slide"><img src="./img/uranus2.png" /></div>
+              <div class="carousel-slide"><img src="./img/uranus3.png" /></div>
+            </div>
+
+            <div class="carousel-arrows arrow-1">
+              <label for="uranus3" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="uranus2" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+            <div class="carousel-arrows arrow-2">
+              <label for="uranus1" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="uranus3" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+            <div class="carousel-arrows arrow-3">
+              <label for="uranus2" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="uranus1" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="ship6-wrapper" id="ship6Wrapper">
+          <img src="./img/ship6.png" class="ship1" id="ship6" />
+          <div class="ship-overlay-box hidden" id="ship6Overlay">
+            <div class="ship1-bottom-text2">
+              <span class="ship1-text2">Voyager 2</span>
+              <table class="ship1-text3">
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    국가
+                  </td>
+                  <td>미국 (USA)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    발사 일자
+                  </td>
+                  <td>1977년 8월 20일</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    임무 기간
+                  </td>
+                  <td>1977.8.20 ~ 현재</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    정보
+                  </td>
+                  <td>
+                    천왕성과 해왕성을 유일하게 근접 비행한 탐사선으로, 태양계를
+                    벗어나고 있습니다.
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 9 -->
+      <section class="section9">
+        <!-- Neptune 이미지 -->
+        <img src="./img/neptune.png" class="neptune" id="neptune" />
+
+        <!-- Neptune 오버레이 -->
+        <div class="overlay-box" id="neptuneOverlayBox" style="display: none">
+          <div class="left-container">
+            <div class="planet-title-container">
+              <span class="planet-title1">N</span>
+              <p class="title">eptune</p>
+            </div>
+            <div class="planet-text-box">
+              <img src="./img/neptune-small.png" class="planet-small-img" />
+              <p class="planet-text1">
+                해왕성은 태양계의 가장 먼 행성으로, 강력한 폭풍과 빠른 바람으로
+                뒤덮여 있습니다. 짙은 푸른색은 대기 중 메탄 때문이며, 극한의
+                환경 속에도 고요한 아름다움을 지닙니다.
+              </p>
+            </div>
+            <table class="planet-text2">
+              <tr>
+                <td>반지름</td>
+                <td style="padding-left: 32px">24,622km</td>
+              </tr>
+              <tr>
+                <td>대기 구성</td>
+                <td style="padding-left: 32px">수소, 헬륨, 메탄</td>
+              </tr>
+              <tr>
+                <td>자전 주기</td>
+                <td style="padding-left: 32px">약 16.1시간</td>
+              </tr>
+              <tr>
+                <td>공전 주기</td>
+                <td style="padding-left: 32px">약 165년</td>
+              </tr>
+              <tr>
+                <td>평균 온도</td>
+                <td style="padding-left: 32px">-214°C</td>
+              </tr>
+              <tr>
+                <td>위성 개수</td>
+                <td style="padding-left: 32px">14개</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="planet-carousel">
+            <input type="radio" name="neptune-slide" id="neptune1" checked />
+            <input type="radio" name="neptune-slide" id="neptune2" />
+            <input type="radio" name="neptune-slide" id="neptune3" />
+
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="./img/neptune1.png" /></div>
+              <div class="carousel-slide"><img src="./img/neptune2.png" /></div>
+              <div class="carousel-slide"><img src="./img/neptune3.png" /></div>
+            </div>
+
+            <div class="carousel-arrows arrow-1">
+              <label for="neptune3" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="neptune2" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+            <div class="carousel-arrows arrow-2">
+              <label for="neptune1" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="neptune3" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+            <div class="carousel-arrows arrow-3">
+              <label for="neptune2" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="neptune1" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="ship7-wrapper" id="ship7Wrapper">
+          <img src="./img/ship7.png" class="ship1" id="ship7" />
+          <div class="ship-overlay-box hidden" id="ship7Overlay">
+            <div class="ship1-bottom-text2">
+              <span class="ship-text-2">New Horizons</span>
+              <table class="ship1-text3">
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    국가
+                  </td>
+                  <td>미국 (USA)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    발사 일자
+                  </td>
+                  <td>2006년 1월 19일</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    임무 기간
+                  </td>
+                  <td>2006.1.19 ~ 현재</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    정보
+                  </td>
+                  <td>
+                    명왕성을 최초로 근접 촬영한 탐사선으로, 현재 카이퍼 벨트를
+                    향해 비행 중입니다.
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 10 -->
+      <section class="section10">
+        <!-- Pluto 이미지 -->
+        <img src="./img/pluto.png" class="pluto" id="pluto" />
+
+        <!-- Pluto 오버레이 -->
+        <div class="overlay-box" id="plutoOverlayBox" style="display: none">
+          <div class="left-container">
+            <div class="planet-title-container">
+              <span class="planet-title1">P</span>
+              <p class="title">luto</p>
+            </div>
+            <div class="planet-text-box">
+              <img src="./img/pluto-small.png" class="planet-small-img" />
+              <p class="planet-text1">
+                명왕성은 한때 아홉 번째 행성이었으나 지금은 왜행성으로
+                분류됩니다. 얼음과 바위로 이루어졌으며, 얇은 대기와 느린 공전
+                속에서 조용히 태양계를 돌고 있습니다.
+              </p>
+            </div>
+            <table class="planet-text2">
+              <tr>
+                <td>반지름</td>
+                <td style="padding-left: 32px">1,188km</td>
+              </tr>
+              <tr>
+                <td>대기 구성</td>
+                <td style="padding-left: 32px">질소, 메탄, 일산화탄소</td>
+              </tr>
+              <tr>
+                <td>자전 주기</td>
+                <td style="padding-left: 32px">약 6.4일</td>
+              </tr>
+              <tr>
+                <td>공전 주기</td>
+                <td style="padding-left: 32px">약 248년</td>
+              </tr>
+              <tr>
+                <td>평균 온도</td>
+                <td style="padding-left: 32px">-229°C</td>
+              </tr>
+              <tr>
+                <td>위성 개수</td>
+                <td style="padding-left: 32px">5개</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="planet-carousel">
+            <input type="radio" name="pluto-slide" id="pluto1" checked />
+            <input type="radio" name="pluto-slide" id="pluto2" />
+            <input type="radio" name="pluto-slide" id="pluto3" />
+
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="./img/pluto1.png" /></div>
+              <div class="carousel-slide"><img src="./img/pluto2.png" /></div>
+              <div class="carousel-slide"><img src="./img/pluto3.png" /></div>
+            </div>
+
+            <div class="carousel-arrows arrow-1">
+              <label for="pluto3" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="pluto2" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+            <div class="carousel-arrows arrow-2">
+              <label for="pluto1" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="pluto3" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+            <div class="carousel-arrows arrow-3">
+              <label for="pluto2" class="prev"
+                ><img src="./img/arrow.png" class="arrow-img"
+              /></label>
+              <label for="pluto1" class="next"
+                ><img src="./img/arrow.png" class="arrow-img flipped"
+              /></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="ship-wrapper" id="ship8Wrapper">
+          <img src="./img/ship8.png" class="ship1" id="ship8" />
+          <div class="ship-overlay-box hidden" id="ship8Overlay">
+            <div class="ship1-bottom-text2">
+              <span class="ship1-text2">Voyager 1</span>
+              <table class="ship1-text3">
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    국가
+                  </td>
+                  <td>미국 (USA)</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    발사 일자
+                  </td>
+                  <td>1977년 9월 5일</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    임무 기간
+                  </td>
+                  <td>1977.9.5 ~ 현재</td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; padding-right: 1.2vw">
+                    정보
+                  </td>
+                  <td>
+                    태양계를 벗어나 성간 우주에 진입한 인류 역사상 가장 멀리 간
+                    탐사선입니다.
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 11 -->
+      <section class="section11"></section>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollContainer = document.getElementById("scroll-container");
+        const earth = document.querySelector(".earth-bg");
+        const cursor = document.getElementById("customCursor");
+        const logo = document.getElementById("logo");
+        const distanceDisplay = document.createElement("div");
+
+        // ✅ 거리 표시 요소 만들기
+        distanceDisplay.id = "distanceIndicator";
+        distanceDisplay.textContent = "0 km";
+        document.body.appendChild(distanceDisplay);
+
+        let currentScroll = 0;
+        let targetScroll = 0;
+        const scrollSpeed = 1.5;
+        const ease = 0.1;
+
+        let scrollTimer;
+        let lastScrollPos = 0;
+
+        const sections = Array.from(document.querySelectorAll("section"));
+        const sectionDistances = [
+          0, // section1
+          939, // section2: Sputnik 1
+          384400, // section3: Apollo 11
+          78000000, // section4: Perseverance
+          628000000, // section5
+          1275000000, // section6
+          2723000000, // section7
+          4351000000, // section8
+          5900000000, // section9
+          24400000000, // section10
+          24400000000, // section11
+        ];
+
+        // ✅ 누적 거리 업데이트 함수 (수정된 조건 적용)
+        function updateDistanceFromScroll() {
+          const scrollX = scrollContainer.scrollLeft;
+          let totalDistance = 0;
+          let targetDist = 0;
+          let threshold = 0.7;
+          let startOffset = 500;
+
+          for (let i = 0; i < sections.length; i++) {
+            if (i >= 1) {
+              targetDist = sectionDistances[i] - sectionDistances[i - 1];
+            } else {
+              targetDist = sectionDistances[i];
+            }
+
+            if (i <= 2) {
+              startOffset = 750;
+              threshold = 0.9;
+            }
+
+            const section = sections[i];
+            const startX = section.offsetLeft - startOffset;
+            // const rect = section.getBoundingClientRect();
+            // const startX = rect.left + scrollX * threshold;
+
+            const width = section.offsetWidth;
+
+            const thresholdX = startX + width * threshold;
+
+            if (scrollX >= thresholdX) {
+              totalDistance = sectionDistances[i];
+            } else if (scrollX > startX && scrollX < thresholdX) {
+              const progress = (scrollX - startX) / (thresholdX - startX);
+              totalDistance += progress * targetDist;
+
+              break;
+            } else if (scrollX < startX) {
+              break;
+            }
+          }
+
+          distanceDisplay.textContent = `${Math.floor(
+            totalDistance
+          ).toLocaleString()} km`;
+        }
+
+        const shipPositions = {};
+        function calculateShipPositions() {
+          const ships = [
+            "ship1",
+            "ship2",
+            "ship3",
+            "ship4",
+            "ship5",
+            "ship6",
+            "ship7",
+            "ship8",
+          ];
+          ships.forEach((shipId) => {
+            const ship = document.getElementById(shipId);
+            if (ship) {
+              const tempScroll = scrollContainer.scrollLeft;
+              scrollContainer.scrollLeft = 0;
+
+              const containerRect = scrollContainer.getBoundingClientRect();
+              const shipRect = ship.getBoundingClientRect();
+              const absolutePosition = shipRect.left - containerRect.left;
+
+              const adjustments = {
+                ship1: 1000,
+                ship2: 2000,
+                ship3: -100,
+                ship4: -10,
+                ship5: -220,
+                ship6: -50,
+                ship7: -100,
+                ship8: -180,
+              };
+
+              shipPositions[shipId] =
+                absolutePosition + (adjustments[shipId] || 0);
+              scrollContainer.scrollLeft = tempScroll;
+            }
+          });
+        }
+
+        function animateScroll() {
+          currentScroll += (targetScroll - currentScroll) * ease;
+          scrollContainer.scrollLeft = currentScroll;
+
+          updateDistanceFromScroll();
+
+          if (Math.abs(currentScroll - lastScrollPos) > 0.5) {
+            document.body.classList.add("scrolling");
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(() => {
+              document.body.classList.remove("scrolling");
+            }, 200);
+            lastScrollPos = currentScroll;
+          }
+
+          const vw = window.innerWidth;
+          const trigger = 0.6 * vw;
+          if (currentScroll > trigger) {
+            earth.style.position = "fixed";
+            earth.style.transform = `translateX(-${currentScroll - trigger}px)`;
+          } else {
+            earth.style.transform = "translateX(0)";
+          }
+
+          requestAnimationFrame(animateScroll);
+        }
+
+        window.addEventListener(
+          "wheel",
+          (e) => {
+            e.preventDefault();
+            targetScroll += e.deltaY * scrollSpeed;
+            targetScroll = Math.max(
+              0,
+              Math.min(
+                targetScroll,
+                scrollContainer.scrollWidth - scrollContainer.clientWidth
+              )
+            );
+          },
+          { passive: false }
+        );
+
+        for (let i = 1; i <= 8; i++) {
+          const ship = document.getElementById(`ship${i}`);
+          const overlay = document.getElementById(`ship${i}Overlay`);
+          if (ship && overlay) {
+            ship.addEventListener("click", () => {
+              overlay.classList.toggle("hidden");
+            });
+          }
+        }
+
+        [
+          "moon",
+          "mars",
+          "jupiter",
+          "saturn",
+          "uranus",
+          "neptune",
+          "pluto",
+        ].forEach((planet) => {
+          const planetImg = document.getElementById(planet);
+          const overlay = document.getElementById(`${planet}OverlayBox`);
+          if (planetImg && overlay) {
+            planetImg.addEventListener("click", () => {
+              overlay.style.display =
+                overlay.style.display === "block" ? "none" : "block";
+            });
+          }
+        });
+
+        document.addEventListener("mousemove", (e) => {
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+        });
+
+        document.querySelectorAll("img, .clickable").forEach((el) => {
+          el.addEventListener("mouseenter", () => {
+            cursor.src = "./img/man2.png";
+          });
+          el.addEventListener("mouseleave", () => {
+            cursor.src = "./img/man1.png";
+          });
+        });
+
+        document.querySelectorAll(".ship-nav li").forEach((item) => {
+          item.addEventListener("click", () => {
+            const targetId = item.dataset.target;
+            if (shipPositions[targetId] !== undefined) {
+              targetScroll = shipPositions[targetId];
+            }
+          });
+        });
+
+        // ✅ 스크롤 시 행성 오버레이 모두 닫기
+        scrollContainer.addEventListener("scroll", () => {
+          const planetIds = [
+            "moon",
+            "mars",
+            "jupiter",
+            "saturn",
+            "uranus",
+            "neptune",
+            "pluto",
+          ];
+
+          planetIds.forEach((planet) => {
+            const overlay = document.getElementById(`${planet}OverlayBox`);
+            if (overlay && overlay.style.display === "block") {
+              overlay.style.display = "none";
+            }
+          });
+        });
+
+        logo.addEventListener("click", () => {
+          targetScroll = 0;
+        });
+
+        window.addEventListener("load", () => {
+          setTimeout(() => {
+            calculateShipPositions();
+            animateScroll();
+          }, 100);
+        });
+
+        window.addEventListener("resize", () => {
+          calculateShipPositions();
+        });
+      });
+    </script>
+
+    <div id="distanceIndicator"></div>
+  </body>
+</html>
